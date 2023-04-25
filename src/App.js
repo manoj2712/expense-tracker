@@ -24,10 +24,13 @@ const expenses = [
   },
 ];
 
-const App = ()=> {
+const App = () => {
+  const addExpenseHandler = (data) => {
+    console.log(data);
+  }
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
